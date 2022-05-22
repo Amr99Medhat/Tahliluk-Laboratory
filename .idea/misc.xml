@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-ldpi/background_content_bottom.xml" value="0.28194444444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-ldpi/background_icon.xml" value="0.28194444444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-ldpi/background_image.xml" value="0.28194444444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-ldpi/ic_add.xml" value="0.28194444444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-ldpi/ic_back.xml" value="0.28194444444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-ldpi/ic_search.xml" value="0.28194444444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3490740740740741" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-xhdpi/ic_refresh.xml" value="0.2881944444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-xxhdpi/background_chat_input.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-xxhdpi/background_received_message.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-xxhdpi/background_sent_message.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-xxhdpi/ic_home.xml" value="0.28541666666666665" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-xxhdpi/ic_profile.xml" value="0.28541666666666665" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-xxhdpi/ic_send.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable-xxhdpi/ic_settings_bottom_nav.xml" value="0.28541666666666665" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_bottom_sheet_button.xml" value="0.31527777777777777" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_bottom_sheet_dialog.xml" value="0.31527777777777777" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_chat_input.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_chat_input2.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_content_bottom2.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_icon.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_icon2.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_image.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_input.xml" value="0.34444444444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_lab_iamge.xml" value="0.28541666666666665" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_lab_image.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_oval_shape_left.xml" value="0.3888888888888889" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_oval_shape_right.xml" value="0.34444444444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_received_message.xml" value="0.32013888888888886" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_received_message2.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_sent_message.xml" value="0.275" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_sent_message2.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_splash_screen.xml" value="0.3490740740740741" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/background_verified_dialog.xml" value="0.20972222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/ic_add.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/ic_arrow_right.xml" value="0.32013888888888886" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/ic_back.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/ic_home.xml" value="0.3916015625" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/ic_map.xml" value="0.3888888888888889" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/ic_profile.xml" value="1.253125" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/ic_refresh.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/ic_search.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/ic_send.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/ic_settings_bottom_nav.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/language_tab_selector.xml" value="0.32013888888888886" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/language_tab_text_color_selector.xml" value="0.32013888888888886" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/drawable/vector.xml" value="0.27847222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_chat.xml" value="0.185546875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_labs_chat.xml" value="0.321875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_location.xml" value="0.321875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_main.xml" value="0.2534722222222222" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_main_chat.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_patients.xml" value="0.25" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_reservations.xml" value="0.321875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_sign_in.xml" value="0.17777777777777778" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_sign_up.xml" value="0.25972222222222224" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_splash_screen.xml" value="0.30185185185185187" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/activity_verify_phone_number.xml" value="0.25625" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/fragment_change_password.xml" value="0.321875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/fragment_change_phone.xml" value="0.321875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/fragment_home.xml" value="0.2881944444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/fragment_profile.xml" value="0.2833333333333333" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/fragment_settings.xml" value="0.2881944444444444" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/item_change_language_dialog.xml" value="0.321875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/item_container_patient.xml" value="0.25" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/item_container_received_message.xml" value="0.321875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/item_container_recent_conversion.xml" value="0.321875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/item_container_sent_message.xml" value="0.2465277777777778" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/item_verified_dialog.xml" value="0.321875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/layout/item_verified_dialog_layout.xml" value="0.17777777777777778" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19765625" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21597222222222223" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/xml/backup_rules.xml" value="0.321875" />
+        <entry key="..\:/Users/Amr/AndroidStudioProjects/TahlilukLaboratory/app/src/main/res/xml/my_backup_rules.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2881944444444444" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
