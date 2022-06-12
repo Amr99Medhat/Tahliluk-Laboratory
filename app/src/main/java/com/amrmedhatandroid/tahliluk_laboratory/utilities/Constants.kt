@@ -67,6 +67,16 @@ class Constants {
         const val KEY_SEND_MESSAGE_FAILED = "Send message failed"
         const val TAG_CHANGE_PASSWORD = "changePassword"
         const val TAG_CHANGE_PHONE = "changePhone"
+        const val KEY_COLLECTION_RESERVATION = "reservations"
+        const val Reservation = "reservation"
+        const val IMAGE = "image"
+        const val LAB_NAME ="labName"
+        const val RESERVATION_RESULT= "results"
+        const val ORDER_STATE ="orderState"
+        const val ORDER_STATE_COMPLETED = "Completed"
+        const val LAB_ANALYTICS = "analytics"
+        const val ANALYSIS_NAME="analysis_name"
+        const val ANALYSIS_PRICE = "analysis_price"
 
 
         var remoteMsgHeaders: HashMap<String, String>? = null

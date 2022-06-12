@@ -1,6 +1,13 @@
 package com.amrmedhatandroid.tahliluk_laboratory.firebase
 
+import android.app.Activity
+import android.net.Uri
+import androidx.fragment.app.Fragment
+import com.amrmedhatandroid.tahliluk_laboratory.R
+import com.amrmedhatandroid.tahliluk_laboratory.fragments.MedicalAnalyticsFragment
+import com.amrmedhatandroid.tahliluk_laboratory.fragments.ReservationDetailsFragment
 import com.amrmedhatandroid.tahliluk_laboratory.utilities.Constants
+import com.amrmedhatandroid.tahliluk_laboratory.utilities.SupportClass
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
@@ -8,6 +15,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.firestore.*
 import com.google.firebase.firestore.EventListener
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -180,4 +189,51 @@ class FirestoreClass {
         updates[tokenKey] = FieldValue.delete()
         return mDocumentReference.update(updates)
     }
-}
+
+
+    fun getReservations(collectionName: String,
+        labId:String):
+        Task<QuerySnapshot> {
+        val qs = mFireStore.collection(collectionName).whereEqualTo(Constants.KEY_LAB_ID,labId)
+        return qs.get()
+    }
+
+
+
+    fun uploadResultToCloudStorage(fragment:ReservationDetailsFragment, imageFileUri: Uri?, imageType:String){
+        val sRef: StorageReference = FirebaseStorage.getInstance().reference.child(
+            imageType+ System.currentTimeMillis() +"." +SupportClass().getFileExtensions(fragment,imageFileUri)
+        )
+        sRef.putFile(imageFileUri!!).addOnSuccessListener {taskSnapShot ->
+                taskSnapShot.metadata!!.reference!!.downloadUrl.toString()
+            taskSnapShot.metadata!!.reference!!.downloadUrl.addOnSuccessListener { Uri ->
+                        fragment.imageUploadSuccess(Uri.toString())
+                }
+            }
+                .addOnFailureListener { Exception ->
+
+                }
+        }
+
+
+    fun updateReservation(fragment:ReservationDetailsFragment,reservationId:String,reserveMap:HashMap<String,Any>){
+        mFireStore.collection(Constants.KEY_COLLECTION_RESERVATION)
+            .document(reservationId)
+            .update(reserveMap)
+            .addOnSuccessListener {
+                fragment.reservationUpdated()
+
+            }
+    }
+
+    fun getLabAnalysis(
+                       labId: String,
+                       collectionName:String)
+    :Task<DocumentSnapshot> {
+        val qs = mFireStore.collection(collectionName).document(labId)
+        return qs.get()
+
+    }
+    }
+
+

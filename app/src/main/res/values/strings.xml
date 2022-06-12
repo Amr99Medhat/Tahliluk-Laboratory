@@ -72,6 +72,30 @@
     <string name="failed_signup">Failed Sign Up</string>
     <string name="medical_analysis">Medical Analysis</string>
     <string name="this_lab_has_not_been_verified_by_us_yet_nplease_wait_a_little_while_we_contact_you">This lab has not been verified by us yet,\nPlease wait a little while we contact you.</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="no_reservations">No reservations added yet!</string>
+    <string name="order_details">order details</string>
+    <string name="visit_price" translatable="false">"50.0EGP"</string>
+    <string name="order_date">Order Date :</string>
+    <string name="order_state">Order State :</string>
+    <string name="analyses_result">Analysis Result</string>
+    <string name="labName">Lab name :</string>
+    <string name="pending">Pending</string>
+    <string name="inprogress">in Progress</string>
+    <string name="completed">Completed</string>
+    <string name="Upload_result">Upload Result</string>
+    <string name="selected_analyses">selected analytics</string>
+    <string name="selectedaddress">Selected Address</string>
+    <string name="lbl_subtotal">sub total</string>
+    <string name="lbl_Home_visit_cost">"Home visit cost "</string>
+    <string name="lbl_total_amount">total amount</string>
+    <string name="The_cost_of_the_analysis">The cost of the analysis</string>
+    <string name="Tv_Analytics">Analytics</string>
+    <string name="Visiting_expenses">Visiting expenses</string>
+    <string name="patient_information">patient name</string>
+    <string name="egyptian_currency">EGP</string>
+    <string name="Additional_instructions">Additional instructions</string>
+    <string name="result_uploaded">Result Uploaded</string>
+    <string name="MediacalAnalysis">Medical Analysis</string>
+<!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,5 +1,7 @@
 package com.amrmedhatandroid.tahliluk_laboratory.utilities
 
+import android.app.Activity
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
@@ -8,15 +10,19 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.net.Uri
 import android.util.Base64
 import android.util.DisplayMetrics
 import android.view.Gravity
 import android.view.View
+import android.webkit.MimeTypeMap
 import android.widget.FrameLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat.startActivity
+import androidx.fragment.app.Fragment
 import com.amrmedhatandroid.tahliluk_laboratory.R
 import com.amrmedhatandroid.tahliluk_laboratory.databinding.FragmentHomeBinding
 import com.google.android.material.snackbar.BaseTransientBottomBar
@@ -28,6 +34,19 @@ import java.util.*
 class SupportClass : AppCompatActivity() {
 
     companion object {
+        private lateinit var mProgressBar: Dialog
+        fun showProgressBar(context: Context, text: String, progressText: TextView) {
+            mProgressBar = Dialog(context)
+            mProgressBar.setContentView(R.layout.dialog_progress)
+            mProgressBar.setCancelable(false)
+            mProgressBar.setCanceledOnTouchOutside(false)
+            progressText.text = text
+            mProgressBar.show()
+        }
+
+        fun hideDialog() {
+            mProgressBar.dismiss()
+        }
 
         fun showToast(context: Context, message: String) {
             val toast = Toast.makeText(context, message, Toast.LENGTH_SHORT)
@@ -146,5 +165,9 @@ class SupportClass : AppCompatActivity() {
         fun startLightMode() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
+    }
+
+    fun getFileExtensions(fragment: Fragment, uri: Uri?): String? {
+        return MimeTypeMap.getSingleton().getExtensionFromMimeType(fragment.context?.contentResolver?.getType(uri!!))
     }
 }

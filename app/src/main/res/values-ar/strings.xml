@@ -73,4 +73,28 @@
     <string name="failed_signup">حدث خطأ اثناء تسجيل الدخول</string>
     <string name="medical_analysis">التحاليل الطبية</string>
     <string name="this_lab_has_not_been_verified_by_us_yet_nplease_wait_a_little_while_we_contact_you">لم يتم التحقق من هذا المعمل من قبلنا حتى الآن ،\nيُرجى الانتظار قليلاً حتى نتصل بك.</string>
+    <string name="no_reservations">لم يتم اضافة حجوزات !</string>
+    <string name="Upload_result">Upload Result</string>
+
+    <string name="selected_analyses">التحاليل المختارة</string>
+    <string name="selectedaddress">العنوان المختار</string>
+    <string name="lbl_subtotal">اجمالي التحاليل </string>
+    <string name="lbl_Home_visit_cost">"تكلفة الزيارة المنزلية "</string>
+    <string name="lbl_total_amount">القيمة الاجمالية</string>
+    <string name="The_cost_of_the_analysis">تكلفة التحاليل</string>
+    <string name="Tv_Analytics">التحاليل</string>
+    <string name="Visiting_expenses">تكاليف الزيارة</string>
+    <string name="patient_information">معلومات المريض</string>
+    <string name="egyptian_currency">ج.م</string>
+    <string name="order_details">تفاصيل الطلب</string>
+    <string name="order_date">تاريخ الطلب :</string>
+    <string name="order_state">حالة الطلب:</string>
+    <string name="labName">اسم العمل:</string>
+    <string name="pending">معلق</string>
+    <string name="inprogress">جاري العمل</string>
+    <string name="Additional_instructions">تعليمات اضافية</string>
+    <string name="completed">اكتمل</string>
+    <string name="analyses_result">نتيجة التحاليل</string>
+    <string name="result_uploaded">تم رفع النتيجة </string>
+    <string name="MediacalAnalysis">التحاليل الطبية</string>
 </resources>
