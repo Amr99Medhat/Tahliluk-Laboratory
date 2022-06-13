@@ -97,4 +97,7 @@
     <string name="analyses_result">نتيجة التحاليل</string>
     <string name="result_uploaded">تم رفع النتيجة </string>
     <string name="MediacalAnalysis">التحاليل الطبية</string>
+    <string name="analysis_name">Analysis name</string>
+    <string name="analysis_price">Analysis price</string>
+    <string name="add_analysis">Add Analysis</string>
 </resources>

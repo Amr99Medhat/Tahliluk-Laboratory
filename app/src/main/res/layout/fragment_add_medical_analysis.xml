@@ -1,11 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_content_bottom"
     tools:context=".fragments.AddMedicalAnalysisFragment">
 
 
+    <EditText
+        android:id="@+id/analysis_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_43sdp"
+        android:layout_marginTop="234dp"
+        android:layout_marginEnd="@dimen/_43sdp"
+        android:background="@drawable/background_input"
+        android:color="@color/primary"
+        android:elevation="@dimen/_5sdp"
+        android:fontFamily="@font/ntailub"
+        android:hint="@string/analysis_name"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:textColor="@color/secondary_text"
+        android:textColorHint="@color/third_text"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/analysis_price"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_43sdp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="@dimen/_43sdp"
+        android:background="@drawable/background_input"
+        android:color="@color/primary"
+        android:elevation="@dimen/_5sdp"
+        android:fontFamily="@font/ntailub"
+        android:hint="@string/analysis_price"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/secondary_text"
+        android:textColorHint="@color/third_text"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/analysis_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_43sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_43sdp"
+        android:fontFamily="@font/ntailub"
+        android:text="@string/add_analysis"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/analysis_price" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:text="@string/add_analysis"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/_20ssp"
+        android:fontFamily="@font/ntailub"
+        android:shadowColor="@color/shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

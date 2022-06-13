@@ -98,4 +98,7 @@
     <string name="MediacalAnalysis">Medical Analysis</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="analysis_name">Analysis name</string>
+    <string name="analysis_price">Analysis price</string>
+    <string name="add_analysis">Add Analysis</string>
 </resources>
