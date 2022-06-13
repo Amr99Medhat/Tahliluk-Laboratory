@@ -15,6 +15,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.amrmedhatandroid.tahliluk_laboratory.R
 import com.amrmedhatandroid.tahliluk_laboratory.adapters.ReservationAnalyticsAdapter
@@ -25,6 +26,7 @@ import com.amrmedhatandroid.tahliluk_laboratory.models.Reserve
 import com.amrmedhatandroid.tahliluk_laboratory.utilities.Constants
 import com.amrmedhatandroid.tahliluk_laboratory.utilities.SupportClass
 import com.amrmedhatandroid.tahliluk_laboratory.viewModels.ReservationsDetailsViewModel
+import kotlinx.coroutines.cancel
 
 import java.io.Serializable
 
@@ -168,6 +170,12 @@ class ReservationDetailsFragment : Fragment(), Serializable {
         mReservationDetailsBinding.tvOrderState.text = Constants.ORDER_STATE_COMPLETED
         mReservationDetailsBinding.btnShowResult.isEnabled=false
         SupportClass.hideDialog()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        viewModelStore.clear()
+        mReservationDetailsViewModel.viewModelScope.cancel()
     }
 
 }

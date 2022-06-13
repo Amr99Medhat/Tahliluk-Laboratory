@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewModelScope
 import com.amrmedhatandroid.tahliluk_laboratory.R
 import com.amrmedhatandroid.tahliluk_laboratory.adapters.ReservationsAdapter
 import com.amrmedhatandroid.tahliluk_laboratory.databinding.DialogProgressBinding
@@ -18,6 +19,7 @@ import com.amrmedhatandroid.tahliluk_laboratory.models.Reserve
 import com.amrmedhatandroid.tahliluk_laboratory.utilities.Constants
 import com.amrmedhatandroid.tahliluk_laboratory.utilities.SupportClass
 import com.amrmedhatandroid.tahliluk_laboratory.viewModels.ReservationsViewModel
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.collect
 
 
@@ -100,7 +102,11 @@ class ReservationsFragment : Fragment(),ReservationListener {
         fragmentTransaction.replace(R.id.fragment_container, reservationDetailsFragment)
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
+    }
 
-
+    override fun onDestroy() {
+        super.onDestroy()
+        viewModelStore.clear()
+        mReservationsViewModel.viewModelScope.cancel()
     }
 }

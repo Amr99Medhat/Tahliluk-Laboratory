@@ -96,6 +96,6 @@
     <string name="Additional_instructions">Additional instructions</string>
     <string name="result_uploaded">Result Uploaded</string>
     <string name="MediacalAnalysis">Medical Analysis</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
