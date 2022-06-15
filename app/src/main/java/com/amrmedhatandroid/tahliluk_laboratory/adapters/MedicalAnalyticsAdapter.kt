@@ -13,6 +13,7 @@ import com.amrmedhatandroid.tahliluk_laboratory.models.Analytics
 class MedicalAnalyticsAdapter(
     private var analytics: ArrayList<Analytics>,
 
+
 ) :
     RecyclerView.Adapter<MedicalAnalyticsAdapter.LabViewHolder>() {
 
@@ -22,6 +23,7 @@ class MedicalAnalyticsAdapter(
         fun setAnalyticData(analyses: Analytics) {
             binding.textAnalysisName.text = analyses.analysis_name
             binding.textAnalysisPrice.text = analyses.analysis_price
+
 
 
         }
@@ -36,14 +38,12 @@ class MedicalAnalyticsAdapter(
 
     override fun onBindViewHolder(holder: LabViewHolder, position: Int) {
         holder.setAnalyticData(analytics[position])
-        holder.itemView.startAnimation(
-            AnimationUtils.loadAnimation(
-                holder.itemView.context,
-                R.anim.rv_animation
-            )
-        )
-
-
+//        holder.itemView.startAnimation(
+//            AnimationUtils.loadAnimation(
+//                holder.itemView.context,
+//                R.anim.rv_animation
+//            )
+//        )
     }
 
     override fun getItemCount(): Int {
@@ -51,8 +51,8 @@ class MedicalAnalyticsAdapter(
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setFilteredList(FilteredList: ArrayList<Analytics>) {
-        this.analytics = FilteredList
+    fun setNewList(newList: ArrayList<Analytics>) {
+        this.analytics = newList
         notifyDataSetChanged()
     }
 

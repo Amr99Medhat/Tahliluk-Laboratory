@@ -157,6 +157,7 @@
                         android:layout_height="match_parent"
                         android:background="@null"
                         android:clickable="true"
+
                         android:clipToPadding="true"
                         android:drawableEnd="@drawable/ic_map"
                         android:drawableTint="@color/primary"
@@ -170,7 +171,7 @@
                         android:textAlignment="viewStart"
                         android:textAllCaps="false"
                         android:textColor="@color/third_text"
-                        android:textSize="@dimen/_16ssp"
+                        android:textSize="@dimen/_10ssp"
                         android:textStyle="bold" />
 
                 </LinearLayout>

@@ -75,7 +75,7 @@ class ChatAdapter(
             holder.itemView.startAnimation(
                 AnimationUtils.loadAnimation(
                     holder.itemView.context,
-                    R.anim.rv_animation_recived
+                    R.anim.rv_animation_sent
                 )
             )
         } else {
@@ -83,6 +83,7 @@ class ChatAdapter(
                 chatMessages[position],
                 receiverProfileImage!!
             )
+            holder.itemView.startAnimation(AnimationUtils.loadAnimation(holder.itemView.context, R.anim.rv_animation_recived))
         }
     }
 

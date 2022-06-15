@@ -97,7 +97,19 @@
     <string name="analyses_result">نتيجة التحاليل</string>
     <string name="result_uploaded">تم رفع النتيجة </string>
     <string name="MediacalAnalysis">التحاليل الطبية</string>
-    <string name="analysis_name">Analysis name</string>
-    <string name="analysis_price">Analysis price</string>
-    <string name="add_analysis">Add Analysis</string>
+    <string name="analysis_name">اسم التحليل</string>
+    <string name="analysis_price">سعر التحليل</string>
+    <string name="add_analysis">اضافة تحليل</string>
+    <string name="Analysis_added_successfully">تمت اضافة التحليل بنجاح</string>
+    <string name="confirm_delete_message">هل انت متأكد من انك تريد حذف هذا التحليل</string>
+    <string name="dialog_delete_analysis_title">حذف التحليل</string>
+    <string name="btn_yes">نعم</string>
+    <string name="btn_no">لا</string>
+    <string name="edit_analysis">تعديل التحليل </string>
+    <string name="no_analysis_added_yet">لم تتم اضافة تحاليل بعد</string>
+    <string name="enter_analysisName">ادخل اسم التحليل</string>
+    <string name="enter_analysisPrice">ادخل سعر التحليل</string>
+    <string name="getting_address">جاري الحصول علي العنوان</string>
+    <string name="get_address">"الحصول علي العنوان "</string>
+    <string name="please_ask">برجاء طلب الحصول علي العنوان وانت في موقع المعمل</string>
 </resources>

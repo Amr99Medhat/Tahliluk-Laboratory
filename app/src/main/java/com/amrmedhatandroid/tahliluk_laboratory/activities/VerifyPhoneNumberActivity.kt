@@ -31,6 +31,7 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
     private var mLabPassword: String? = null
     private var mLabLocation: LatLng? = null
     private var mLunchState: String? = null
+    private var mLabAddress:String?=null
     private lateinit var mAuth: FirebaseAuth
     private var mVerificationCodeBySystem: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,6 +69,7 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
         mLabPassword = intent.getStringExtra(Constants.KEY_PASSWORD)
         mLunchState = intent.getStringExtra(Constants.KEY_LUNCH_STATE)
         mLabLocation = intent.getParcelableExtra(Constants.KEY_LOCATION_RESULT)
+        mLabAddress=intent.getStringExtra(Constants.KEY_LOCATION_Address_Result)
 
         //TODO("I Disabled the verification fun to test and will enable it")
         //verifyPhoneNumberViewModel.sendVerificationCodeToLab(this, labPhoneNumber!!, mCallbacks)
@@ -154,6 +156,7 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
         lab[Constants.KEY_PASSWORD] = mLabPassword!!
         lab[Constants.KEY_IMAGE] = mLabImage!!
         lab[Constants.KEY_LAB_VERIFICATION_STATE] = Constants.KEY_LAB_UNVERIFIED
+        lab[Constants.KEY_LAB_ADDRESS] = mLabAddress!!
 
         mVerifyPhoneNumberViewModel.signUp(lab).collect { signUpResultId ->
 

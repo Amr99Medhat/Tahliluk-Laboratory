@@ -12,4 +12,5 @@ class Lab : Serializable {
     var labVerifiedState: String = Constants.KEY_EMPTY
     var labLatitude: String = Constants.KEY_EMPTY
     var labLongitude: String = Constants.KEY_EMPTY
+    var address:String=Constants.KEY_EMPTY
 }

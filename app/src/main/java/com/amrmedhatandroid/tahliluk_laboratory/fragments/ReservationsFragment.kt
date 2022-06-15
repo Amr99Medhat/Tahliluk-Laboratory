@@ -19,7 +19,7 @@ import com.amrmedhatandroid.tahliluk_laboratory.models.Reserve
 import com.amrmedhatandroid.tahliluk_laboratory.utilities.Constants
 import com.amrmedhatandroid.tahliluk_laboratory.utilities.SupportClass
 import com.amrmedhatandroid.tahliluk_laboratory.viewModels.ReservationsViewModel
-import kotlinx.coroutines.cancel
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collect
 
 
@@ -29,12 +29,15 @@ class ReservationsFragment : Fragment(),ReservationListener {
     private lateinit var mReservationsList: ArrayList<Reserve>
     private lateinit var mReservationsListAdapter: ReservationsAdapter
     private lateinit var bindingDialog: DialogProgressBinding
+    private var parentJob = Job()
+    private val coroutineScope = CoroutineScope(Dispatchers.Main + parentJob)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
             mReservationsViewModel = ViewModelProvider(this)[ReservationsViewModel::class.java]
+
 
     }
 
@@ -44,8 +47,7 @@ class ReservationsFragment : Fragment(),ReservationListener {
     ): View {
         mReservationBinding = FragmentReservationsBinding.inflate(layoutInflater)
         bindingDialog = DialogProgressBinding.inflate(layoutInflater)
-         getReservations()
-
+        getReservations()
         return mReservationBinding.root
     }
 
@@ -63,23 +65,30 @@ class ReservationsFragment : Fragment(),ReservationListener {
     private fun getReservations(){
         lifecycleScope.launchWhenResumed {
             mReservationsViewModel.getReservations(requireContext()).collect {
-                if (it.size > 0) {
-                    mReservationsList = ArrayList()
-                    mReservationsList = it
+                mReservationsList = it
+                if (mReservationsList.isNotEmpty()) {
+                    SupportClass.loading(false, null, mReservationBinding.progressBar)
                     mReservationsList.sortWith { obj1: Reserve, obj2: Reserve ->
                         obj2.orderDateTime!!.compareTo(obj1.orderDateTime!!)
                     }
                     mReservationBinding.rvReservations.visibility = View.VISIBLE
-
                     mReservationsListAdapter = ReservationsAdapter(mReservationsList,
                         this@ReservationsFragment)
                     mReservationBinding.rvReservations.adapter =
                         mReservationsListAdapter
-                    SupportClass.loading(false,
-                        null,
-                        mReservationBinding.progressBar)
                 }
-            }
+                coroutineScope.launch {
+                    delay(1000)
+                    if(mReservationsList.isEmpty())
+                    {
+                        mReservationBinding.tvNoReservations.visibility=View.VISIBLE
+                        SupportClass.loading(false,
+                            null,
+                            mReservationBinding.progressBar)
+                    }
+                }
+
+                }
         }
 
     }

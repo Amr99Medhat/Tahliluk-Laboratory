@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.ViewModelProvider
@@ -28,6 +29,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var mSignUpViewModel: SignUpViewModel
     private var mCurrentLatLong: LatLng? = null
     private var mEncodedImage: String? = null
+    private var mAddress:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mActivitySignUpBinding = ActivitySignUpBinding.inflate(layoutInflater)
@@ -180,6 +182,7 @@ class SignUpActivity : AppCompatActivity() {
         intent.putExtra(Constants.KEY_PASSWORD, mActivitySignUpBinding.labPassword.text.toString())
         intent.putExtra(Constants.KEY_LOCATION_RESULT, mCurrentLatLong)
         intent.putExtra(Constants.KEY_LUNCH_STATE, Constants.KEY_LUNCH_STATE_FIRST_TIME)
+        intent.putExtra(Constants.KEY_LOCATION_Address_Result,mAddress)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         startActivity(intent)
     }
@@ -206,14 +209,19 @@ class SignUpActivity : AppCompatActivity() {
                     Constants.KEY_LOCATION_RESULT_CODE -> {
                         val intent = result.data
                         if (intent != null) {
+                            val address =
+                                intent.getStringExtra(Constants.KEY_LOCATION_Address_Result)
+                            mAddress = address
                             val latLng =
                                 intent.getParcelableExtra<LatLng>(Constants.KEY_LOCATION_RESULT)
                             mCurrentLatLong = latLng
+
                             mActivitySignUpBinding.labLocation.text =
-                                "${latLng!!.latitude} ${latLng.longitude}"
+                               address
 
                         }
                     }
+
 
                 }
             }

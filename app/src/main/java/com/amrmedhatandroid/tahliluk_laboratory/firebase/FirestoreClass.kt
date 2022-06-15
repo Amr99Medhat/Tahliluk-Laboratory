@@ -234,6 +234,32 @@ class FirestoreClass {
         return qs.get()
 
     }
+
+    fun updateMedicalAnalytics(
+        collectionName:String,
+        labId: String):
+        DocumentReference{
+        return mFireStore.collection(collectionName).document(labId)
+    }
+
+    fun deleteMedicalAnalysis(
+        collectionName:String,
+        labId:String)
+    :DocumentReference{
+       return mFireStore.collection(collectionName).document(labId)
+
+    }
+
+    fun editMedicalAnalysis(
+        collectionName:String,
+        labId:String)
+            :DocumentReference{
+        return mFireStore.collection(collectionName).document(labId)
+
+    }
+
+
+
     }
 
 

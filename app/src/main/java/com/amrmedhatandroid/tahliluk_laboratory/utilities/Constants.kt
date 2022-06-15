@@ -77,7 +77,10 @@ class Constants {
         const val LAB_ANALYTICS = "analytics"
         const val ANALYSIS_NAME="analysis_name"
         const val ANALYSIS_PRICE = "analysis_price"
-
+        const val EDIE_ANALYSIS = "editAnalysis"
+        const val ANALYSIS_POSITION = "position"
+        const val KEY_LOCATION_Address_Result = "locationAddressResult"
+        const val KEY_LAB_ADDRESS = "address"
 
         var remoteMsgHeaders: HashMap<String, String>? = null
 

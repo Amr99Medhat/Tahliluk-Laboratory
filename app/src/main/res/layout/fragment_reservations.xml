@@ -37,7 +37,6 @@
         android:textSize="@dimen/_15ssp"
         android:visibility="gone" />
 
-
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="@dimen/_25sdp"
