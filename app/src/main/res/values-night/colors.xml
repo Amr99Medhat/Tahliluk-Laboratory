@@ -27,4 +27,5 @@
     <color name="radiobuttonColor">#989898</color>
     <color name="btnDisabledColor">#33FBF6F6</color>
     <color name="container_background">#1e2437</color>
+    <color name="swipe_left">#2d6eff</color>
 </resources>

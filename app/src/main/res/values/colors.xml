@@ -28,4 +28,5 @@
     <color name="btnDisabledColor">#33FBF6F6</color>
     <color name="container_background">#FFFFFFFF</color>
     <color name="delete_background">#EB5353</color>
+    <color name="swipe_left">#1D326A</color>
 </resources>

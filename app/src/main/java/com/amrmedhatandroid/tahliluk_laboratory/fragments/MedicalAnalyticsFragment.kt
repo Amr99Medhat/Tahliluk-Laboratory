@@ -204,7 +204,7 @@ class MedicalAnalyticsFragment : Fragment() {
                 isCurrentlyActive: Boolean
             ) {
                  RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
-                     .addSwipeLeftBackgroundColor(ContextCompat.getColor(requireContext(),R.color.primary_dark))
+                     .addSwipeLeftBackgroundColor(ContextCompat.getColor(requireContext(),R.color.swipe_left))
                      .addSwipeLeftActionIcon(R.drawable.ic_baseline_edit_24)
                      .addSwipeRightBackgroundColor(ContextCompat.getColor(requireContext(),R.color.delete_background))
                      .addSwipeRightActionIcon(R.drawable.ic_baseline_delete_24)
