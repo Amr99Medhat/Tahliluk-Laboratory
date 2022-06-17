@@ -194,7 +194,6 @@ class ChatActivity : BaseActivity() {
         }
     }
 
-    //TODO("Handle ids with the other app")
     private fun goSendNotification() {
         try {
             val tokens = JSONArray()

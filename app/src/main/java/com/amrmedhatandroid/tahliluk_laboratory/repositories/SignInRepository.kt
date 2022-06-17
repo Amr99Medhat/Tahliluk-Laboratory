@@ -30,14 +30,14 @@ class SignInRepository {
             if (it.isSuccessful && it.result != null && it.result!!.documents.size > 0) {
                 runBlocking {
                     val documentSnapshot = it.result!!.documents[0]
-                    mLab.labId = documentSnapshot.id
+                    mLab.id = documentSnapshot.id
                     mLab.labName = documentSnapshot.getString(Constants.KEY_LAB_NAME)!!
-                    mLab.labImage = documentSnapshot.getString(Constants.KEY_IMAGE)!!
-                    mLab.labPhoneNumber =
+                    mLab.image = documentSnapshot.getString(Constants.KEY_IMAGE)!!
+                    mLab.phoneNumber =
                         documentSnapshot.getString(Constants.KEY_LAB_PHONE_NUMBER)!!
-                    mLab.labPassword = documentSnapshot.getString(Constants.KEY_PASSWORD)!!
-                    mLab.labLatitude = documentSnapshot.getString(Constants.KEY_LATITUDE)!!
-                    mLab.labLongitude = documentSnapshot.getString(Constants.KEY_LONGITUDE)!!
+                    mLab.password = documentSnapshot.getString(Constants.KEY_PASSWORD)!!
+                    mLab.latitude = documentSnapshot.getString(Constants.KEY_LATITUDE)!!
+                    mLab.longitude = documentSnapshot.getString(Constants.KEY_LONGITUDE)!!
                     mLab.labVerifiedState =
                         documentSnapshot.getString(Constants.KEY_LAB_VERIFICATION_STATE)!!
 
@@ -46,13 +46,13 @@ class SignInRepository {
 
             } else {
                 runBlocking {
-                    mLab.labId = "-1"
+                    mLab.id = "-1"
                     mLab.labName = "-1"
-                    mLab.labImage = "-1"
-                    mLab.labPhoneNumber = "-1"
-                    mLab.labPassword = "-1"
-                    mLab.labLatitude = "-1"
-                    mLab.labLongitude = "-1"
+                    mLab.image = "-1"
+                    mLab.phoneNumber = "-1"
+                    mLab.password = "-1"
+                    mLab.latitude = "-1"
+                    mLab.longitude = "-1"
                     mLab.labVerifiedState = "-1"
 
                     mSignInResult.emit(mLab)
@@ -69,13 +69,13 @@ class SignInRepository {
     ) {
         mPreferenceManager = PreferenceManager(context)
         mPreferenceManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true)
-        mPreferenceManager.putString(Constants.KEY_LAB_ID, lab.labId)
-        mPreferenceManager.putString(Constants.KEY_IMAGE, lab.labImage)
+        mPreferenceManager.putString(Constants.KEY_LAB_ID, lab.id)
+        mPreferenceManager.putString(Constants.KEY_IMAGE, lab.image)
         mPreferenceManager.putString(Constants.KEY_LAB_NAME, lab.labName)
-        mPreferenceManager.putString(Constants.KEY_LAB_PHONE_NUMBER, lab.labPhoneNumber)
-        mPreferenceManager.putString(Constants.KEY_PASSWORD, lab.labPassword)
-        mPreferenceManager.putString(Constants.KEY_LATITUDE, lab.labLatitude)
-        mPreferenceManager.putString(Constants.KEY_LONGITUDE, lab.labLongitude)
+        mPreferenceManager.putString(Constants.KEY_LAB_PHONE_NUMBER, lab.phoneNumber)
+        mPreferenceManager.putString(Constants.KEY_PASSWORD, lab.password)
+        mPreferenceManager.putString(Constants.KEY_LATITUDE, lab.latitude)
+        mPreferenceManager.putString(Constants.KEY_LONGITUDE, lab.longitude)
         mPreferenceManager.putString(Constants.KEY_APP_LANGUAGE, Constants.KEY_LANGUAGE_ENGLISH)
         mPreferenceManager.putString(Constants.KEY_APP_DARK_MODE_STATE, Constants.KEY_LIGHT_MODE)
     }

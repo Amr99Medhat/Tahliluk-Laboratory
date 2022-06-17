@@ -96,18 +96,18 @@ class SignInActivity : AppCompatActivity() {
             mActivitySignInBinding.labPhoneNumber.text.toString(),
             mActivitySignInBinding.labPassword.text.toString()
         ).collect {
-            if (it.labId != Constants.KEY_EMPTY && it.labId != Constants.KEY_STRING_MINUS_ONE) {
+            if (it.id != Constants.KEY_EMPTY && it.id != Constants.KEY_STRING_MINUS_ONE) {
                 if (it.labVerifiedState == Constants.KEY_LAB_VERIFIED) {
                     mLabBasicData = it
 
                     val labData = Lab()
-                    labData.labId = it.labId
-                    labData.labImage = it.labImage
+                    labData.id = it.id
+                    labData.image = it.image
                     labData.labName = it.labName
-                    labData.labPhoneNumber = it.labPhoneNumber
-                    labData.labPassword = it.labPassword
-                    labData.labLatitude = it.labLatitude
-                    labData.labLongitude = it.labLongitude
+                    labData.phoneNumber = it.phoneNumber
+                    labData.password = it.password
+                    labData.latitude = it.latitude
+                    labData.longitude = it.longitude
 
                     mSignInViewModel.saveBasicData(
                         this,
@@ -123,7 +123,7 @@ class SignInActivity : AppCompatActivity() {
                     showDialog()
                 }
 
-            } else if (it.labId == Constants.KEY_STRING_MINUS_ONE) {
+            } else if (it.id == Constants.KEY_STRING_MINUS_ONE) {
                 unsuccessfulSignInMessage()
             }
         }

@@ -14,6 +14,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.*
 import com.amrmedhatandroid.tahliluk_laboratory.R
+import com.amrmedhatandroid.tahliluk_laboratory.models.Analytics
 import com.amrmedhatandroid.tahliluk_laboratory.models.Lab
 import com.amrmedhatandroid.tahliluk_laboratory.viewModels.VerifyPhoneNumberViewModel
 import com.google.firebase.auth.ktx.auth
@@ -31,14 +32,16 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
     private var mLabPassword: String? = null
     private var mLabLocation: LatLng? = null
     private var mLunchState: String? = null
-    private var mLabAddress:String?=null
+    private var mLabAddress: String? = null
+    private var mAnalytics: ArrayList<Analytics>? = ArrayList()
     private lateinit var mAuth: FirebaseAuth
     private var mVerificationCodeBySystem: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mActivityVerifyPhoneNumberBinding = ActivityVerifyPhoneNumberBinding.inflate(layoutInflater)
         setContentView(mActivityVerifyPhoneNumberBinding.root)
-        mVerifyPhoneNumberViewModel = ViewModelProvider(this)[VerifyPhoneNumberViewModel::class.java]
+        mVerifyPhoneNumberViewModel =
+            ViewModelProvider(this)[VerifyPhoneNumberViewModel::class.java]
         mAuth = Firebase.auth
         getDataFromIntent()
         setListeners()
@@ -69,10 +72,9 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
         mLabPassword = intent.getStringExtra(Constants.KEY_PASSWORD)
         mLunchState = intent.getStringExtra(Constants.KEY_LUNCH_STATE)
         mLabLocation = intent.getParcelableExtra(Constants.KEY_LOCATION_RESULT)
-        mLabAddress=intent.getStringExtra(Constants.KEY_LOCATION_Address_Result)
+        mLabAddress = intent.getStringExtra(Constants.KEY_LOCATION_Address_Result)
 
-        //TODO("I Disabled the verification fun to test and will enable it")
-        //verifyPhoneNumberViewModel.sendVerificationCodeToLab(this, labPhoneNumber!!, mCallbacks)
+        //mVerifyPhoneNumberViewModel.sendVerificationCodeToLab(this, mLabPhoneNumber!!, mCallbacks)
         lifecycleScope.launchWhenResumed {
             signUp()
         }
@@ -148,7 +150,7 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
             mActivityVerifyPhoneNumberBinding.btnVerify,
             mActivityVerifyPhoneNumberBinding.progressBar
         )
-        val lab: HashMap<Any, Any> = HashMap()
+        val lab: HashMap<Any, Any?> = HashMap()
         lab[Constants.KEY_LAB_NAME] = mLabName!!
         lab[Constants.KEY_LATITUDE] = mLabLocation!!.latitude.toString()
         lab[Constants.KEY_LONGITUDE] = mLabLocation!!.longitude.toString()
@@ -157,6 +159,8 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
         lab[Constants.KEY_IMAGE] = mLabImage!!
         lab[Constants.KEY_LAB_VERIFICATION_STATE] = Constants.KEY_LAB_UNVERIFIED
         lab[Constants.KEY_LAB_ADDRESS] = mLabAddress!!
+        lab[Constants.LAB_ANALYTICS] = mAnalytics
+
 
         mVerifyPhoneNumberViewModel.signUp(lab).collect { signUpResultId ->
 
@@ -168,13 +172,13 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
                         mActivityVerifyPhoneNumberBinding.progressBar
                     )
                     val labData = Lab()
-                    labData.labId = signUpResultId[Constants.KEY_DATA]!!.toString()
-                    labData.labImage = mLabImage!!
+                    labData.id = signUpResultId[Constants.KEY_DATA]!!.toString()
+                    labData.image = mLabImage!!
                     labData.labName = mLabName!!
-                    labData.labPhoneNumber = mLabPhoneNumber!!
-                    labData.labPassword = mLabPassword!!
-                    labData.labLatitude = mLabLocation!!.latitude.toString()
-                    labData.labLongitude = mLabLocation!!.longitude.toString()
+                    labData.phoneNumber = mLabPhoneNumber!!
+                    labData.password = mLabPassword!!
+                    labData.latitude = mLabLocation!!.latitude.toString()
+                    labData.longitude = mLabLocation!!.longitude.toString()
 
                     startSignInActivityWithFlags()
                 }

@@ -31,7 +31,7 @@ class VerifyPhoneNumberViewModel : ViewModel() {
         return mVerifyPhoneNumberRepository.signInByCredentials(activity, credential)
     }
 
-    suspend fun signUp(lab: HashMap<Any, Any>): MutableStateFlow<HashMap<String, String>> {
+    suspend fun signUp(lab: HashMap<Any, Any?>): MutableStateFlow<HashMap<String, String>> {
         return mVerifyPhoneNumberRepository.signUp(lab)
     }
 }

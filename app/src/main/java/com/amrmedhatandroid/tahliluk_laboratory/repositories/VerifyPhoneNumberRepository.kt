@@ -56,7 +56,7 @@ class VerifyPhoneNumberRepository {
         return mSignInByCredentialsResult
     }
 
-    suspend fun signUp(lab: HashMap<Any, Any>): MutableStateFlow<HashMap<String, String>> {
+    suspend fun signUp(lab: HashMap<Any, Any?>): MutableStateFlow<HashMap<String, String>> {
         mSuccessSignUp = MutableStateFlow(HashMap())
         mData = HashMap()
         val task = FirestoreClass().signUp(Constants.KEY_COLLECTION_LABS, lab)

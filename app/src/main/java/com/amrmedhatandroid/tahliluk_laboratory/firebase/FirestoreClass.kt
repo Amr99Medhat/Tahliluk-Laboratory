@@ -1,10 +1,6 @@
 package com.amrmedhatandroid.tahliluk_laboratory.firebase
 
-import android.app.Activity
 import android.net.Uri
-import androidx.fragment.app.Fragment
-import com.amrmedhatandroid.tahliluk_laboratory.R
-import com.amrmedhatandroid.tahliluk_laboratory.fragments.MedicalAnalyticsFragment
 import com.amrmedhatandroid.tahliluk_laboratory.fragments.ReservationDetailsFragment
 import com.amrmedhatandroid.tahliluk_laboratory.utilities.Constants
 import com.amrmedhatandroid.tahliluk_laboratory.utilities.SupportClass
@@ -43,7 +39,7 @@ class FirestoreClass {
 
     fun signUp(
         collectionName: String,
-        lab: HashMap<Any, Any>,
+        lab: java.util.HashMap<Any, Any?>,
     ): Task<DocumentReference> {
         val cR = mFireStore.collection(collectionName)
         return cR.add(lab)

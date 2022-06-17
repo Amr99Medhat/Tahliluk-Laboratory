@@ -96,7 +96,6 @@
     <string name="Additional_instructions">Additional instructions</string>
     <string name="result_uploaded">Result Uploaded</string>
     <string name="MediacalAnalysis">Medical Analysis</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="analysis_name">Analysis name</string>
     <string name="analysis_price">Analysis price</string>
     <string name="add_analysis">Add Analysis</string>
@@ -105,7 +104,6 @@
     <string name="btn_yes">Yes</string>
     <string name="btn_no">No</string>
     <string name="dialog_delete_analysis_title">Delete Analysis</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="edit_analysis">Edit Analysis</string>
     <string name="no_analysis_added_yet">Analytics not added yet</string>
     <string name="enter_analysisName">Enter Analysis name</string>
