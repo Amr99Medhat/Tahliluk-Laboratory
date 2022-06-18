@@ -74,10 +74,10 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
         mLabLocation = intent.getParcelableExtra(Constants.KEY_LOCATION_RESULT)
         mLabAddress = intent.getStringExtra(Constants.KEY_LOCATION_Address_Result)
 
-        //mVerifyPhoneNumberViewModel.sendVerificationCodeToLab(this, mLabPhoneNumber!!, mCallbacks)
-        lifecycleScope.launchWhenResumed {
-            signUp()
-        }
+        mVerifyPhoneNumberViewModel.sendVerificationCodeToLab(this, mLabPhoneNumber!!, mCallbacks)
+//        lifecycleScope.launchWhenResumed {
+//            signUp()
+//        }
     }
 
     private val mCallbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks = object :
