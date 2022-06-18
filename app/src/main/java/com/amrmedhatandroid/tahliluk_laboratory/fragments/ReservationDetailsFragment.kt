@@ -111,6 +111,13 @@ class ReservationDetailsFragment : Fragment(), Serializable {
             )
 
         }
+        if (reservation.orderState.equals(getString(R.string.pending))){
+            mReservationDetailsBinding.CvResult.visibility=View.GONE
+        }
+        else
+        {
+            mReservationDetailsBinding.btnShowResult.visibility=View.VISIBLE
+        }
 
         mReservationDetailsBinding.btnShowResult.setOnClickListener {
             selectResult()
