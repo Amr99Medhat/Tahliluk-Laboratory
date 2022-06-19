@@ -1,8 +1,12 @@
 package com.amrmedhatandroid.tahliluk_laboratory.activities
 
+import android.Manifest
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.amrmedhatandroid.tahliluk_laboratory.R
 import com.amrmedhatandroid.tahliluk_laboratory.databinding.ActivityReservationsBinding
@@ -13,6 +17,7 @@ class ReservationsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityReservationsBinding.inflate(LayoutInflater.from(this))
+        checkPermission()
         setContentView(binding.root)
         setListeners()
         replaceFragment(ReservationsFragment.newInstance())
@@ -32,6 +37,37 @@ class ReservationsActivity : AppCompatActivity() {
     private fun setListeners(){
         binding.imageBack.setOnClickListener {
             onBackPressed()
+        }
+    }
+
+    private fun checkPermission(){
+        val locationPermissionRequest = registerForActivityResult(
+            ActivityResultContracts.RequestMultiplePermissions()
+        ) { permissions ->
+            when {
+                permissions.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false) -> {
+
+                }
+                permissions.getOrDefault(Manifest.permission.ACCESS_COARSE_LOCATION, false) -> {
+
+                } else -> {
+                // No location access granted.
+            }
+            }
+        }
+
+        if ( ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            ) == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            ) == PackageManager.PERMISSION_GRANTED){
+        }
+        else{
+            locationPermissionRequest.launch(arrayOf(
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE))
         }
     }
 }
